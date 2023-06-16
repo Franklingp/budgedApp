@@ -1,9 +1,12 @@
-import { View, Text, Button } from 'react-native'
-import React from 'react';
-import { useState } from 'react';
+import { View, Text } from 'react-native'
+import React, { useState } from 'react';
+
+//styles
+import { Button } from 'react-native-paper';
+
 
 //components
-import DataTable from "./Components/DataTable";
+import { DataTable } from "./components/index";
 
 export default function Home({ navigation }) {
 
@@ -37,8 +40,12 @@ export default function Home({ navigation }) {
     <View>
       <Text >Gastos</Text>
       <DataTable data={expenses} />
-      <Button title="Go to Settings" onPress={() => navigation.navigate("Settings")} />
-      <Button title="Go to About" onPress={() => navigation.navigate("About")} />
+      <Button onPress={() => navigation.navigate("Record")} >
+        Nuevo
+      </Button>
+      <Button onPress={() => navigation.navigate("Settings")}>
+        Ajustes
+      </Button>
     </View>
   )
 }

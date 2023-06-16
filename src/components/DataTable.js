@@ -1,5 +1,4 @@
-import React from 'react';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { DataTable } from 'react-native-paper';
 
 const optionsPerPage = [2, 3, 4];
@@ -14,6 +13,7 @@ const MyComponent = ({ data }) => {
     }, [itemsPerPage]);
 
     return (
+
         <DataTable>
             <DataTable.Header>
                 <DataTable.Title>Gastos</DataTable.Title>

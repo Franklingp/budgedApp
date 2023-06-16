@@ -5,7 +5,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { PaperProvider } from "react-native-paper";
 
 //Views components
-import { Home, About, Settings } from "./src/index";
+import { Home, About, Settings, Record } from "./src/index";
 
 export default function App() {
 	const Stack = createNativeStackNavigator();
@@ -15,6 +15,7 @@ export default function App() {
 		{ component: Home, name: "Home" },
 		{ component: Settings, name: "Settings" },
 		{ component: About, name: "About" },
+		{ component: Record, name: "Record" },
 	];
 
 	return (
